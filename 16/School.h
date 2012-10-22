@@ -1,0 +1,55 @@
+/**
+*@file		School.h
+*@brief		This file contains interface of function according to task 16
+*			
+*
+*
+*	Copyrights 2012 by IvanZahrodsky.
+*/
+
+#ifndef _SCHOOL_H_
+#define _SCHOOL_H_
+
+#include <stdio.h>
+#include <malloc.h>
+#include <stdlib.h>
+
+const int N=5;
+
+struct School
+{
+	char cSrName [ 14 ] ;
+	char cName [ 14 ] ;
+	unsigned short	usSchool ;
+	unsigned short	usClass ;
+};
+
+/**
+*@brief		This function scaning data from keyboard
+*@param		[dat] 
+*@return	void
+*/
+void ScanData ( School* dat ) ;
+
+/**
+*@brief		This function  displays data
+*@param		[dat] 
+*@return	void
+*/
+void PrintData ( School* dat ) ;
+
+/**
+*@brief		This function sorting data 
+*@param		[dat] 
+*@return	void
+*/
+void SortData ( School* dat ) ;
+
+/**
+*@brief		This function check in which the schools pupil in grade 9
+*@param		[dat] 
+*@return	void
+*/
+void CheckSchool ( School* dat ) ;
+
+#endif  //_SCHOOL_H_
