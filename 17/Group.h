@@ -10,11 +10,8 @@
 #ifndef _GROUP_H_
 #define _GROUP_H_
 
-#include <stdio.h>
-#include <malloc.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
+#include "stdafx.h"
+
 const int N=5;
 
 struct Group
@@ -53,4 +50,11 @@ void SortData ( Group* dat ) ;
 *@return	void
 */
 void RandGr ( Group* dat ) ;
+
+/**
+*@brief		This function implemets interface
+*@param		[void] 
+*@return	void
+*/
+void Run ( void ) ;
 #endif //_GROUP_H_

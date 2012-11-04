@@ -1,5 +1,5 @@
 /**
-*@file		main.cpp
+*@file		Task2_17.cpp
 *@brief		This file contains the main function that implementing tasks.
 *			
 *
@@ -7,10 +7,12 @@
 *	Copyrights 2012 by IvanZahrodsky.
 */
 
-#include "School.h"
+#include "stdafx.h"
 
-int main(int argc, char ** argv)
+
+int _tmain(int argc, _TCHAR* argv[])
 {
-	Running ( );
+	Run () ;
 	return 0;
 }
+

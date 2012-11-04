@@ -1,6 +1,6 @@
 /**
-*@file		School.h
-*@brief		This file contains interface of function according to task 16
+*@file		Schhol.h
+*@brief		This file contains interface of function according to task
 *			
 *
 *
@@ -9,6 +9,8 @@
 
 #ifndef _SCHOOL_H_
 #define _SCHOOL_H_
+
+#define _CRT_SECURE_NO_DEPRECATE
 
 #include <stdio.h>
 #include <malloc.h>
@@ -51,5 +53,10 @@ void SortData ( School* dat ) ;
 *@return	void
 */
 void CheckSchool ( School* dat ) ;
-
+/**
+*@brief		This function implements interface
+*@param		[void]
+*@return	void	
+*/
+void Running ( void );
 #endif  //_SCHOOL_H_

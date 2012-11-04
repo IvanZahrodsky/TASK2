@@ -6,9 +6,9 @@
 *
 *	Copyrights 2012 by IvanZahrodsky.
 */
-
+#include "stdafx.h"
 #include "Group.h"
-#include <iostream>
+
 /**
 *@brief		This function scaning data from keyboard
 *@param		[dat] 
@@ -80,9 +80,9 @@ void PrintData ( Group* dat )
 void SortData ( Group* dat )
 {
 	Group temp;
-	for ( int i = 0 ; i < N ; i++ )
+	for ( register int i = 0 ; i < N ; ++i )
 	{
-		for ( int j = i + 1 ; j < N ; j++ )
+		for ( register int j = i + 1 ; j < N ; ++j )
 		{
 			if ( strcmp ( dat[ j ].cName , dat [ i ].cName ) < 0 )
 			{
@@ -126,4 +126,26 @@ void RandGr ( Group* dat )
 		printf ( "In group %d \t %d participants \n" , X3 + 1 , max ) ;
 	}
 
+}
+
+/**
+*@brief		This function implemets interface
+*@param		[void] 
+*@return	void
+*/
+void Run ( void ) 
+{
+	srand ( ( unsigned  int ) time ( NULL ) ) ;
+	Group *grList ;
+	grList = ( Group* ) malloc ( sizeof ( Group ) * N ) ;
+	if ( !grList )
+	{
+		printf ( "\nError in allocate memory!\n" );
+		return;
+	}
+	ScanData ( grList ) ;
+	SortData ( grList ) ;
+	PrintData ( grList ) ;
+	RandGr(grList);
+	free ( grList );
 }
